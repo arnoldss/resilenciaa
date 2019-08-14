@@ -1,0 +1,62 @@
+ <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+              <div ng-if="isAdmin" id="titulo">Selecciona un usuario</div>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+         
+      </ol>
+  </section>
+  <br/>
+    <!-- /.content -->
+
+<div ng-if="isAdmin" class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse"></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <table ng-table="usersTable"  show-filter="true"class="table table-striped">
+          <tr ng-repeat="user in data">
+              
+              <td data-title="'Nombre'" sortable="'name'" filter="{ 'name': 'text' }" >
+                  {{user.name}}
+              </td>
+              <td data-title="'Fecha de Creacion'"   >
+                  {{user.createdAt | date:'yyyy-MM-dd'}}
+              </td>    
+              <td data-title="'Correo Electronico'" sortable="'email'" filter="{ 'email': 'text' }" >
+                  {{user.email}}
+              </td>    
+              <td data-title="'Elegir'"  >
+                  <toggle ng-model="user.choosed" ng-change="changeChoosed({{user.id}})" on="Seleccionado" off="No seleccionado"></toggle>
+              </td>    
+                
+          </tr>
+        </table>
+	     
+      </div>
+      <div class="panel-footer">
+      	  <div    ng-show="loadSuccess" class="mt-5 mb-3 text-muted alert alert-success"  >
+      
+        	 <p style="color:#FFFFFF;">Archivo cargado exitosamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+
+
+ 

@@ -1,0 +1,193 @@
+ <!-- Content Header (Page header) -->
+ 
+    <section class="content-header">
+      <h1>
+              <div id="titulo">EVALUACI&Oacute;N</div>
+      </h1>
+      <h5>
+              <div id="titulo">Cada &aacute;rea contiene una serie de preguntas con tres opciones de respuesta, mismas que deber&aacute;n de ser respondidas de acuerdo a la opci&oacute;n que m&aacute;s se apegue a tu organizaci&oacute;n.  
+</div>
+      </h5>
+	  
+	  <h5>
+	  <div id="titulo">° Cada respuesta contiene varias situaciones en la que se puede encontrar tu organizaci&oacute;n.</div>
+	  </h5>
+	  
+	  <h5>
+	  <div id="titulo">° RECUERDA responder la opci&oacute;n que m&aacute;s se apegue a la realidad institucional.</div>
+	  </h5>
+	  
+	  <h5>
+	  <div id="titulo">° En caso de que consideres que algo no aplica o hay informaci&oacute;n importante para agregar, al final contaras con un recuadro para comentarios adicionales para agregar lo que consideres importante en relaci&oacute;n al &aacute;rea que estas contestando.</div>
+	  </h5>
+	  
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">EVALUACI&Oacute;N</li>        
+      </ol>
+  </section>
+    <!-- /.content -->
+<br/>
+<br/>
+<div id="divContainerMain" "margin-left:10px;" ng-repeat="area in encuesta.area "class="row">
+	<div class="col-md-12">
+		<h4 style="background-color:#1f1f2e;" class="header">
+		<p style="padding-left:30px;font-size:25px;color:#ffffff;">{{area.name}}</p>
+		 
+		</h4>
+		<div style="margin-top:-20px;" ng-repeat="subarea in area.subarea "class="row">
+			<div class="col-md-12">
+			<h5 style="background-color:#80aaff;" class="header">
+		<p style="padding-left:30px;font-size:25px;color:#ffffff;">{{subarea.name}} </p>
+		
+		</h5>
+				 
+					  
+				<div style="margin-left:10px;" ng-repeat="pregunta in subarea.pregunta "class="row">
+					<div class="col-md-12">
+						<h4 style="" class="header">
+							<p style=" font-weight: bold;padding-left:30px;font-size:20px;color:#696969;">{{pregunta.name}}</p>
+						     <input type="hidden" id="preguntaActual_{{pregunta.id}}" vale="{{pregunta.id}}">
+							 <input type="hidden" id="noAplicaIdden_preguntaActual_{{pregunta.id}}">
+					         <input type="hidden" id="actualAplicaIdden_preguntaActual_{{pregunta.id}}">
+						</h4>						 
+						<form action="">
+							<div style="margin-left:10px;" ng-repeat="respuesta in pregunta.respuesta "class="row">
+								
+									  <input type="radio" ng-click="clenaTextArea(respuesta.name,respuesta.id,pregunta.id)" id="{{respuesta.id}}" name="gender" value="{{respuesta.number}}" > {{respuesta.name}}<br>
+								       
+								      <div class="col-md-4" ng-if="respuesta.name == 'No Aplica'">
+								            <textarea disabled="disabled" rows="4" cols="50" id="comentario_{{respuesta.id}}" placeholder="Si desea agregar un comentario, escriba aqu&#205;" style="display:none;"></textarea>				            
+								                  
+								            
+								      </div>								
+							</div></form>
+							<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="divGuardar" class="row">
+	<div class="col-md-12">
+		 <button type="submit" id="submit"  name="submit" ng-click="save()" class="btn btn-primary pull-right">Guardar</button>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<style>
+.after_modal_appended
+{  
+  position:relative;
+}
+
+.red
+{
+  background-color:red;
+}
+
+.blue
+{
+  background-color:#ecf0f5;
+}
+
+.block 
+{
+  width:100%;
+  height:200px;
+}
+
+.modal, .modal-backdrop {
+    position: absolute !important;
+}
+
+</style>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalRespondeEncuestaOk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Evaluaci&#111;n</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="xcloseModalEncuestaOk">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           La encuesta se guardo correctamente!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModalEncuestaOk">Cerrar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalRespondeEncuesta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Evaluaci&#111;n</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="xcloseModalEncuesta">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          Favor de responder todas las preguntas para poder continuar
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModalEncuesta">Cerrar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalEncuestaExistente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="modalEncuestaExistenteContent">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Evaluaci&#111;n</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="xbutttonModalEncuestaExistente">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          Ya cuentas con una evaluaci&#111; contactate con el administrador para mas informaci&#111;n.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="butttonModalEncuestaExistente">Cerrar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

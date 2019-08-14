@@ -1,0 +1,110 @@
+ <!-- Content Header (Page header) -->
+ 
+    <section class="content-header">
+      <h1>
+              <div id="titulo">Consejo</div>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Consejo</li>
+      </ol>
+  </section>
+    <!-- /.content -->
+<br/>
+<br/>
+
+<div class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse">Consejo</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+		<form class="form-horizontal" >
+			  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Puesto:</label>
+		    <div class="col-sm-10"> 
+					<select ng-options="x as x.name for x in positions track by x.id"  ng-model="consejo.positionName" class="form-control"></select>
+		    </div>
+			</div>
+			  <div class="form-group">
+		    <label class="control-label col-sm-2" for="pwd">Nombre:</label>
+		    <div class="col-sm-10"> 
+  				<input type="text" class="form-control" ng-model="consejo.nombre" rows="5" id="comment">
+		    </div>
+			</div>
+			  <div class="form-group">
+		    <label class="control-label col-sm-2" for="pwd">Apellido:</label>
+		    <div class="col-sm-10"> 
+  				<input type="text" class="form-control" ng-model="consejo.apellido" rows="5" id="comment">
+		    </div>
+		  </div>
+			   <div class="form-group">
+		    <label class="control-label col-sm-2"  >Fecha Inicio:</label>
+		    <div class="col-sm-10"> 
+		      <input type="date" ng-model="consejo.fechaInicio" value="{{consejo.fechaInicio}}}" name="bday">
+		    </div>
+		  </div>
+			   <div class="form-group">
+		    <label class="control-label col-sm-2"  >Fecha Final:</label>
+		    <div class="col-sm-10"> 
+		      <input type="date" ng-model="consejo.fechaFinal" value="{{consejo.fechaFinal}}}" name="bday">
+		    </div>
+		  </div>
+			 
+		</form>   
+     
+      </div>
+			<div class="panel-footer"></div>
+				<br/>
+			<br/>
+			 <button type="submit" id="submit"  name="submit" ng-click="save()" class="btn btn-primary pull-right">Agregar</button>
+			
+		</div>
+		<br/>
+		    <div id="collapse2" style="margin-top:20px;" class="panel-collapse collapse in">
+      <div class="panel-body">
+		<form class="form-horizontal" >
+		      <table ng-table="usersTable"  show-filter="true"class="table table-striped">
+          <tr ng-repeat="user in data">
+              
+              <td data-title="'Puesto'" sortable="'positionName'" filter="{ 'positionName': 'text' }" >
+                  {{user.positionName}}
+              </td>
+              
+              <td data-title="'Nombre'" sortable="'nombre'" filter="{ 'nombre': 'text' }" >
+                  {{user.nombre +" "+user.apellido}}
+							</td>    
+				<td data-title="'Fecha Inicio'"  >
+                  {{user.fechaInicio | date : "MM-dd-yyyy"}}
+							</td> 	
+			<td data-title="'Fecha Final'"  >
+                  {{user.fechaFinal | date : "MM-dd-yyyy"}}
+              </td> 		
+               <td data-title="'Edicion'"  >
+				 <button type="submit" id="submit" style="margin-left:-20px;"  name="Eliminar" ng-model="user.id" ng-click="remove(user.id)" class="btn btn-danger pull-right">Eliminar</button>
+              </td>     
+                
+          </tr>
+        </table>
+		</form>   
+     
+      </div>
+			<div class="panel-footer"></div>
+				<br/>
+			<br/>
+			
+    </div>
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+

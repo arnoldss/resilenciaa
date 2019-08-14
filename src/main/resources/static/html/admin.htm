@@ -1,0 +1,62 @@
+ <!-- Content Header (Page header) -->
+ 
+    <section class="content-header">
+      <h1>
+              <div id="titulo">Administrar Usuarios</div>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Administrar Usuarios</li>
+      </ol>
+  </section>
+    <!-- /.content -->
+<br/>
+<br/>
+<table ng-table="usersTable"  show-filter="true"class="table table-striped">
+   <tr ng-repeat="user in data">
+      
+       <td data-title="'Nombre'" sortable="'name'" filter="{ 'name': 'text' }" >
+           {{user.name}}
+       </td>
+       <td data-title="'Fecha de Creacion'"   >
+           {{user.createdAt | date:'yyyy-MM-dd'}}
+       </td>    
+       <td data-title="'Correo Electronico'" sortable="'email'" filter="{ 'email': 'text' }" >
+           {{user.email}}
+       </td>    
+       <td data-title="'Estatus'"  >
+          <toggle ng-model="user.status" ng-change="changeStatus({{user.id}})" on="Activo" off="Inactivo"></toggle>
+       </td>    
+       <td data-title="'Rol'"  >
+            <toggle ng-model="user.role" ng-change="changeRole({{user.id}})" on="Usuario" off="Administrador" onstyle="btn-success" offstyle="btn-warning"></toggle>
+       </td>    
+   </tr>
+</table>
+<!-- <input type="text" id="inputTableSortingUsers" onkeyup="functionSortingPendingUsersActivation()" placeholder="Buscar por nombre.." title="Type in a name">
+ -->
+<!-- <table class="table" id="tableUsersPendingActivate">
+  <tr class="header">
+    <th style="width:20%;">Nombre</th>
+    <th style="width:10%;">Fecha de Creacion</th>
+    <th style="width:30%;">Correo Electronico</th>
+    <th style="width:20%;">Estatus</th>
+    <th style="width:20%;">Rol</th>
+    
+  </tr>
+  <tr ng-repeat="x in users">
+    <td>{{x.name}}</td>
+    <td> {{x.createdAt | date:'yyyy-MM-dd'}}</td>
+        <td>{{x.email}}</td>
+            <td> 
+          	<div>
+		        <toggle ng-model="x.status" ng-change="changeStatus({{x.id}})" on="Activo" off="Inactivo"></toggle>
+    		</div>
+            </td>
+            <td> 
+            <toggle ng-model="x.role" ng-change="changeRole({{x.id}})" on="Usuario" off="Administrador" onstyle="btn-success" offstyle="btn-warning"></toggle>
+            
+            </td>
+    
+  </tr>
+  
+</table> -->

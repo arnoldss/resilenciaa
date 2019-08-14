@@ -1,0 +1,268 @@
+ <!-- Content Header (Page header) -->
+ 
+ <head>
+ <meta charset="UTF-8">
+ </head>
+ 
+    <section class="content-header">
+      <h1>
+	                <div id="titulo">Datos Generales</div>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Datos Generales</li>
+      </ol>
+  </section>
+    <!-- /.content -->
+<br/>
+<br/>
+
+<div class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse">Datos Generales</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+		<form class="form-horizontal" >
+		  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Nombre:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" class="form-control" ng-model="generalData.nombre" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		   <div class="form-group">
+		    <label class="control-label col-sm-2"  >Raz&oacute;n Social:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" class="form-control" ng-model="generalData.razonSocial"id="pwd" placeholder="">
+		    </div>
+		  </div>
+ 
+		</form>      
+      </div>
+      <div class="panel-footer"></div>
+    </div>
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+
+
+<div class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse">Informaci&oacute;n</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+		<form class="form-horizontal" >
+		  <div class="form-group">
+		    <label class="control-label col-sm-2"  >RFC:</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control"  ng-model="generalData.rfc" id="email" placeholder="">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Clasificaci&oacute;n:</label>
+		    <div class="col-sm-10"> 
+
+					<select ng-options="x as x.name for x in clasifications track by x.id " ng-model="generalData.clasificationChoosen" class="form-control"></select>
+
+		    </div>
+		  </div>
+		   <div class="form-group">
+		    <label class="control-label col-sm-2"  >Fecha de Constituci&oacute;n:</label>
+		    <div class="col-sm-10"> 
+		      <input type="date" ng-model="generalData.fechaConstitucion" value="{{generalData.fechaConstitucion}}}" name="bday">
+		    </div>
+		  </div>
+    		<div class="form-group">
+		    <label class="control-label col-sm-2"  >Inicio de Operaci&oacute;n:</label>
+		    <div class="col-sm-10"> 
+		      <input type="date" ng-model="generalData.inicioOperacion" name="bday">
+		    </div>
+		  </div>
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Tipo de Propiedad:</label>
+		    <div class="col-sm-10"> 
+					<select ng-options="x as x.name for x in properties track by x.id" ng-model="generalData.propertyChoosen" class="form-control"></select>
+					
+		    </div>
+		  </div>
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Comentarios:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.comentarios" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		</form>      
+      </div>
+      <div class="panel-footer"></div>
+    </div>
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+
+
+<div class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse">Direcci&oacute;n</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+		<form class="form-horizontal" >
+		  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Calle:</label>
+		    <div class="col-sm-10">
+		      <input type="text" ng-model="generalData.calle" class="form-control" id="email" placeholder="">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label col-sm-2"  >N&uacute;mero:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text"  ng-model="generalData.numero" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+	 
+    	 
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Colonia:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.colonia" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >C&oacute;digo Postal:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.codigoPostal" class="form-control" id="pwd" placeholder="">
+		    </div>
+			</div>
+				  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Estado:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" value="Nuevo Leon"  disabled class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Ciudad:</label>
+		    <div class="col-sm-10"> 
+					<select ng-options="x as x.name for x in cities track by x.id"  ng-model="generalData.city" class="form-control"></select>
+		    </div>
+		  </div>
+		  
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Pa&iacute;s:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" value="Mexico" disabled class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Tel&eacute;fono Oficina:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.telefonoOficina" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >www:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.www" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		  	  <div class="form-group">
+		    <label class="control-label col-sm-2"  >email:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.email" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		</form>      
+      </div>
+      <div class="panel-footer"></div>
+    </div>
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse">Direcci&oacute;n de Contacto</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+		<form class="form-horizontal" >
+		  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Nombre de contacto:</label>
+		    <div class="col-sm-10">
+		      <input type="text" ng-model="generalData.nombreDelContacto" class="form-control" id="email" placeholder="">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Tel&eacute;fono de contacto:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.telefonoDeContacto" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+		   <div class="form-group">
+		    <label class="control-label col-sm-2" >Email de contacto:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="generalData.emailDeContacto" class="form-control" id="pwd" placeholder="">
+		    </div>
+		  </div>
+ 
+		</form>      
+			</div>
+			
+      <div class="panel-footer">
+	<br/>
+			
+			</div>
+		</div>
+			<br/>
+			<br/>
+			 <button type="submit" id="submit"  name="submit" ng-click="save()" class="btn btn-primary pull-right">Enviar</button>
+			
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+
+

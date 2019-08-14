@@ -1,0 +1,53 @@
+ <!-- Content Header (Page header) -->
+ 
+    <section class="content-header">
+      <h1>
+              <div id="titulo">Resultado de Evaluaci&oacute;n</div>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Resultado de Evaluaci&oacute;n</li>
+      </ol>
+  </section>
+    <!-- /.content -->
+<br/>
+<br/>
+
+
+
+<table ng-table="usersEncTable"  show-filter="true"class="table table-striped">
+   <tr ng-repeat="user in data">
+      
+       <td data-title="'Nombre'" sortable="'name'" filter="{ 'name': 'text' }" >
+           {{user.name}}
+       </td>   
+       <td data-title="'Correo Electronico'" sortable="'email'" filter="{ 'email': 'text' }" >
+           {{user.email}}
+       </td>     
+       
+        <td data-title="'Encuesta'">  
+             <a ng-href="#!resultadoEncuestaUser/{{user.id}}" ><img src="images/detalle.png" width="42" height="42"/> </a>                     
+       </td>
+       
+       <td data-title="'Encuesta'">
+            <a id="close" class="closing"  href="/contestaEncuesta/generaExcel?idusuario={{user.id}}"><img src="images/excel.png" width="42" height="42"/></a>
+
+       </td> 
+       
+      
+       
+       
+       
+          
+   </tr>
+</table>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+
+ CREATE TABLE RS_GENERAL_DATA (
+    id int NOT NULL PRIMARY KEY,
+    createdAt timestamp,
+    idUser		int,
+    proyectoReciente	TEXT,
+    nombre	TEXT,
+    razonSocial	TEXT,
+    rfc		TEXT,
+    clasificationId	int,
+    fechaConstitucion timestamp,
+    inicioOperacion		timestamp,
+    propertyTypeId		int,
+    comentarios			TEXT,
+    calle				TEXT,
+    numero				TEXT,
+    colonia				TEXT,
+    codigoPostal		TEXT,
+    ciudadId			int,
+    estadoId			int,
+    pais				TEXT,
+    telefonoOficina		TEXT,
+    www					TEXT,
+    email				TEXT,
+    nombreDelContacto	TEXT,
+    telefonoDeContacto	TEXT,
+    emailDeContacto		TEXT,
+    clasificationName	TEXT,
+    stateName			TEXT,
+    propertyName		TEXT
+ 	
+);

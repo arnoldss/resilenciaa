@@ -1,0 +1,153 @@
+ <!-- Content Header (Page header) -->
+ 
+    <section class="content-header">
+      <h1>
+              <div id="titulo">Documentos</div>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Documentos</li>
+      </ol>
+  </section>
+    <!-- /.content -->
+<br/>
+<br/>
+
+<div class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse">Agregar documento</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+		<form class="ng-pristine ng-invalid ng-invalid-required"  name="saveDocument" id="saveDocument" ng-submit="save()"   class="form-horizontal" method="POST" action="/document/addDoc" enctype="multipart/form-data">
+		  
+		  <div class="form-group">
+		    <label class="control-label col-sm-2" for="email">Cargar documento:</label>
+		    <div class="col-sm-10">
+		      <input type="file"  required  name="file" class="form-control" id="loadFile" placeholder="">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label col-sm-2" for="pwd">Nombre del documento:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text"  required  class="form-control" name="docName" id="docName" placeholder="">		      
+		    </div>
+		  </div>
+		    <div class="form-group">
+		    <label class="control-label col-sm-2"  >Tipo de documento:</label>
+		    <div class="col-sm-10"> 
+
+					<select  id="iddocumento" name="iddocumento" ng-required="true" ng-options="x as x.name for x in docs track by x.id " ng-model="generalData.docTypeChoosed" class="form-control"></select>
+
+		    </div>
+		  </div>
+		   <div class="form-group">
+		    <label class="control-label col-sm-2"  ng-model="comments"for="pwd">Comentario:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" required class="form-control" name="comments" id="comments" placeholder="">
+		    </div>
+		  </div>
+		  
+		  
+   		 
+		        <button type="submit"  id="submit"  name="submit"  class="btn btn-primary pull-right">Agregar </button>
+		 
+		  
+		</form>      
+      </div>
+      <div class="panel-footer">
+      	  <div    ng-show="loadSuccess" class="mt-5 mb-3 text-muted alert alert-success"  >
+      
+        	 <p style="color:#FFFFFF;">Archivo cargado exitosamente.</p>
+        </div>
+      </div>
+    </div>
+    
+    
+        <div id="collapse2" style="margin-top:20px;" class="panel-collapse collapse in">
+      <div class="panel-body">
+		<form class="form-horizontal" >
+		      <table ng-table="catalogsTable"  show-filter="true"class="table table-striped">
+          <tr ng-repeat="user in datat">
+              
+              <td data-title="'Nombre'" sortable="'fileName'" filter="{ 'fileName': 'text' }" >
+                 
+<!--                   <input type="text" name="edit" id="typeTextTable_{{user.id}}" value="{{user.fileName}}"> -->
+                        <a href="/document/downloadFile?idarchivo={{user.id}}">{{user.fileName}}</a>                        
+                        
+              </td>
+              
+          <td data-title="'Tipo documento'" sortable="'docType'" filter="{ 'docType': 'text' }" >
+                 
+                    {{user.docType}} 
+              </td>
+			
+               <td data-title="'Edicion'"  >
+               <div class = "row">
+               <div class="col-md-2"></div>
+               <div class="col-md-2"></div>
+               
+               	<div class ="col-md-4">
+               					 <button type="submit" id="submit" style="margin-left:-20px;"  name="Eliminar" ng-model="user.id" ng-click="remove(user.id,user.fileName)" class="btn btn-danger pull-right">Eliminar</button>
+               	
+               	</div>
+               	<div class ="col-md-4">
+<!--                	             	 <button type="submit" id="submit" style="margin-left:-20px;"  name="Actualizar" ng-model="user.id" ng-click="update(user.id)" class="btn btn-success pull-right">Actualizar</button> -->
+               	
+               	</div>
+               	
+               </div>
+
+              
+              </td>     
+                
+          </tr>
+        </table>
+		</form>   
+     
+      </div>
+			<div class="panel-footer"></div>
+				<br/>
+			<br/>
+			
+    </div>
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="deleteFile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="modalEncuestaExistenteContent">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Documentos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="xbutttondeleteFile">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+             Desea eliminar el documento?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="butttondeleteFile">Cerrar</button>  
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="butttondeleteFileSi">Si</button>        
+      </div>
+    </div>
+  </div>
+</div>

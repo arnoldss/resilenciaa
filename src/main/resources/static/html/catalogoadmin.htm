@@ -1,0 +1,198 @@
+ <!-- Content Header (Page header) -->
+ 
+    <section class="content-header">
+      <h1>
+              <div id="titulo">Administracion de Catalogos</div>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Administracion de Catalogos</li>
+      </ol>
+  </section>
+    <!-- /.content -->
+<br/>
+<br/>
+
+<div class="row">
+<div class="col-md-1">
+</div>
+<div class="col-md-10">
+	<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse">Administracion de Catalogos</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+		<form class="form-horizontal" >
+			  <div class="form-group">
+		    <label class="control-label col-sm-2"  >Elegir Catalogo:</label>
+		    <div class="col-sm-10"> 
+					
+					<select class="form-control" ng-model="catalogochoosed" ng-change="loadcatalog()">
+					  <option value="1">Catalogo Clasificacion</option>
+					  <option value="2">Catalogo Tipo Propiedad</option>
+					  <option value="3">Catalogo Puestos en el consejo</option>
+
+					  					  <option value="5" selected>Catalogo Documentos de Institucion</option>
+					  					  <option value="6" selected>Catalogo Fuentes de Ingreso</option>
+<!-- 					  					  <option value="7" selected>Catalogo Estatus Proyecto</option> -->
+					  					  <option value="8" selected>Catalogo Area</option>
+					  					  <option value="9" selected>Catalogo Sub-Area</option>
+			  					  		  <option value="10" selected>Catalogo Pregunta</option>
+  			  					  		  <option value="11" selected>Catalogo Respuesta</option>
+			  					  		  
+					  				
+					  
+					</select>
+		    </div>
+		  </div>
+		   <div ng-if="subareachoosed" class="form-group">
+		    <label class="control-label col-sm-2"  >Elegir Area:</label>
+		    <div class="col-sm-10"> 
+
+					<select ng-change="loadcatalogSubArea()" ng-options="x as x.name for x in areas track by x.id " ng-model="generalData.areachoosed" class="form-control"></select>
+
+		    </div>
+		  </div>
+		  <div ng-if="questionchoosed" class="form-group">
+		    <label class="control-label col-sm-2"  >Elegir Area:</label>
+		    <div class="col-sm-10"> 
+
+					<select ng-change="loadcatalogSubArea()" ng-options="x as x.name for x in areas track by x.id " ng-model="generalData.areachoosed" class="form-control"></select>
+
+		    </div>
+		   
+
+		  </div>
+		    <div ng-if="questionchoosed" class="form-group">
+		 
+		   
+
+		      <label class="control-label col-sm-2"  >Elegir Sub-Area:</label>
+		    <div class="col-sm-10"> 
+
+					<select ng-change="loadcatalogQuestion()" ng-options="x as x.name for x in subareas track by x.id " ng-model="generalData.subareachoosed" class="form-control"></select>
+
+		    </div>
+		  </div>
+		  <!-- Response choosen -->
+		    <div ng-if="responsechoosed" class="form-group">
+		    <label class="control-label col-sm-2"  >Elegir Area:</label>
+		    <div class="col-sm-10"> 
+
+					<select ng-change="loadcatalogSubArea()" ng-options="x as x.name for x in areas track by x.id " ng-model="generalData.areachoosed" class="form-control"></select>
+
+		    </div>
+		   
+
+		  </div>
+		    <div ng-if="responsechoosed" class="form-group">
+		 
+		   
+
+		      <label class="control-label col-sm-2"  >Elegir Sub-Area:</label>
+		    <div class="col-sm-10"> 
+
+					<select ng-change="loadcatalogQuestion()" ng-options="x as x.name for x in subareas track by x.id " ng-model="generalData.subareachoosed" class="form-control"></select>
+
+		    </div>
+		  </div>
+		  <div ng-if="responsechoosed" class="form-group">
+		 
+		   
+
+		      <label class="control-label col-sm-2"  >Elegir Pregunta:</label>
+		    <div class="col-sm-10"> 
+
+					<select ng-change="loadcatalogResponse()" ng-options="x as x.name for x in preguntas track by x.id " ng-model="generalData.preguntachoosed" class="form-control"></select>
+
+		    </div>
+		  </div>
+			<div ng-if="responsechoosed == false" class="form-group">
+		    <label class="control-label col-sm-2"  >Nombre registro:</label>
+		    <div class="col-sm-10"> 
+		      <input type="text" ng-model="namecatalog" class="form-control" id="namecatalog" value=" " placeholder="">
+		    </div>
+			</div>
+ 	    	<div ng-if="responsechoosed" class="form-group">
+			    <label class="control-label col-sm-2"  >Primera Respuesta:</label>
+			    <div class="col-sm-10"> 
+			      <input type="text" ng-model="ppregunta" class="form-control" value=" " id="ppregunta" placeholder="">
+			    </div>
+			</div>
+  	    	<div ng-if="responsechoosed" class="form-group">
+			    <label class="control-label col-sm-2"  >Segunda Respuesta:</label>
+			    <div class="col-sm-10"> 
+			      <input type="text" ng-model="spregunta" class="form-control" value=" " id="spregunta" placeholder="">
+			    </div>
+			</div>
+		  
+ 	    	<div ng-if="responsechoosed" class="form-group">
+			    <label class="control-label col-sm-2"  >Tercera Respuesta:</label>
+			    <div class="col-sm-10"> 
+			      <input type="text" ng-model="tpregunta" class="form-control" value=" " id="tpregunta" placeholder="">
+			    </div>
+			</div>
+ 			  
+		</form>   
+     
+      </div>
+			<div class="panel-footer"></div>
+				<br/>
+			<br/>
+			 <button type="submit" id="submit"  name="submit" ng-click="save()" class="btn btn-primary pull-right">Agregar</button>
+			
+		</div>
+		<br/>
+		    <div id="collapse2" style="margin-top:20px;" class="panel-collapse collapse in">
+      <div class="panel-body">
+		<form class="form-horizontal" >
+		      <table ng-table="catalogsTable"  show-filter="true"class="table table-striped">
+          <tr ng-repeat="user in datat">
+              
+              <td data-title="'Nombre'" sortable="'sourceName'" filter="{ 'name': 'text' }" >
+                 
+                  <input type="text" name="edit" id="typeTextTable_{{user.id}}" value="{{user.name}}">
+              </td>
+              
+      
+			
+               <td data-title="'Edicion'"  >
+               <div class = "row">
+               <div class="col-md-2"></div>
+               <div class="col-md-2"></div>
+               
+               	<div class ="col-md-4">
+               					 <button type="submit" id="submit" style="margin-left:-20px;"  name="Eliminar" ng-model="user.id" ng-click="remove(user.id)" class="btn btn-danger pull-right">Eliminar</button>
+               	
+               	</div>
+               	<div class ="col-md-4">
+               	             	 <button type="submit" id="submit" style="margin-left:-20px;"  name="Actualizar" ng-model="user.id" ng-click="update(user.id)" class="btn btn-success pull-right">Actualizar</button>
+               	
+               	</div>
+               	
+               </div>
+
+              
+              </td>     
+                
+          </tr>
+        </table>
+		</form>   
+     
+      </div>
+			<div class="panel-footer"></div>
+				<br/>
+			<br/>
+			
+    </div>
+  </div>
+</div>
+</div><div class="col-md-1">
+</div>
+
+</div>
+

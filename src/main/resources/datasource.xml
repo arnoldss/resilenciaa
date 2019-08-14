@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+ 
+ 	<bean id="dataSource"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="org.postgresql.ds.PGPoolingDataSource" />
+		<property name="jdbcUrl" value="jdbc:postgresql://142.93.27.154:5432/postgres"/>		
+		<!--property name="jdbcUrl" value="jdbc:postgresql://localhost:5431/postgres" /-->	
+		<property name="user" value="postgres" />
+		<property name="password" value="00001234" />
+		<!--property name="password" value="admin"/-->
+		<property name="maxPoolSize" value="2" />
+ 	    <property name="minPoolSize" value="1" />
+ 	    <property name="initialPoolSize" value="0" />
+ 	    <property name="maxIdleTime" value="0" />
+ 	   
+ 	     
+ 	     
+	</bean>
+    <bean id="sessionFactory"
+      class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource"
+          ref="dataSource"/>
+        <property name="packagesToScan"
+          value="com.app.resilicencia.model"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">
+                    create
+                </prop>
+                <prop key="hibernate.dialect">
+					org.hibernate.dialect.PostgreSQL82Dialect
+                </prop>
+            </props>
+        </property>
+    </bean>
+     <bean id="txManager"
+      class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>
