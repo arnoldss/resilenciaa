@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="resiliencia" />
         <module name="resilicencia" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="resilicencia" target="1.8" />
+      <module name="resiliencia" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
