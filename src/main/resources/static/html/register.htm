@@ -44,6 +44,8 @@
 /*  	width:300px;   */
 /*   	height:300px;   */
 /*   }   */
+
+ 	/* box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2); */
    h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:left; }  
 
  input {  
@@ -57,8 +59,7 @@
  	color: #fff; 
  	text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
  	border: 1px solid rgba(0,0,0,0.3); 
- 	border-radius: 4px; 
- 	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2); 
+ 	border-radius: 4px;
  	-webkit-transition: box-shadow .5s ease; 
  	-moz-transition: box-shadow .5s ease; 
  	-o-transition: box-shadow .5s ease; 
@@ -121,7 +122,8 @@
 
     <div class="checkbox mb-3">
         <label>
-            <input type="checkbox" ng-model="checkterminos" class="form-control" value="remember-me"> <p style="margin-top:-40px;">He leído y Acepto <a href="#!convenio" target="_blank">El Convenio de Confidencialidad</a></p>
+            <p class="ab-text-size-terms" >He leído y Acepto <a href="#!convenio" target="_blank">El Convenio de Confidencialidad</a></p>
+            <input type="checkbox" ng-model="checkterminos" class="form-control" value="remember-me">
         </label>
     </div>
 

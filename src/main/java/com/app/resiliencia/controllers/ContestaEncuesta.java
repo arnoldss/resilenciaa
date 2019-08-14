@@ -211,12 +211,12 @@ public class ContestaEncuesta {
 								
 								
 								 
-							 if(doublevar>1 || doublevar <1.99){
+							 if(doublevar>0 && doublevar <=1.99){
 						      System.out.println("roja---------------------------");
 								 item2.setImg("roja.png");
 							 }
 							 
-						     if(doublevar>2 || doublevar <2.99){
+						     if(doublevar>= 2 && doublevar <=2.99){
 						    	 System.out.println("amarilla---------------------------");
 						    	 item2.setImg("amarilla.png");								 
 							}

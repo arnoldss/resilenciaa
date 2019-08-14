@@ -20,8 +20,8 @@ body {
 
 .form-signin {
   width: 100%;
-  max-width: 330px;
-  padding: 15px;
+  /*max-width: 330px;
+  padding: 15px; */
   margin: 0 auto;
 }
 .form-signin .checkbox {
@@ -46,4 +46,8 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.ab-text-size-terms {
+  font-size: 20px;
 }

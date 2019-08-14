@@ -27,7 +27,7 @@ app.controller('registerController', function($scope,$window,$http,$rootScope,$m
 			avoidDouble=true;
 			console.log("email value: "+$scope.email)
 			console.log("name value: "+$scope.name)
-		if($scope.email == "" || $scope.name == ""|| $scope.tel == ""|| $scope.pwd == ""|| $scope.comment == "" || $scope.checkterminos==""){
+		if($scope.email == "" || $scope.name == ""|| $scope.tel == ""|| $scope.pwd == ""|| $scope.comment == "" || $scope.checkterminos === false){
 			console.log("Inside email vacio")
 			$scope.notFilledFields	=	true;
 				return;
