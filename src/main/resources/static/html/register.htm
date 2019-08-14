@@ -2,12 +2,12 @@
 <html lang="en" >
 
 <head>
-  <meta charset="UTF-8">
-  <title>Login Form</title>
-  
+    <meta charset="UTF-8">
+    <title>Login Form</title>
 
-  
-      <style>
+
+
+    <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 
 /* .btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; } */
@@ -69,15 +69,15 @@
 
     </style>
 
-  <link rel="stylesheet" href="/css/login.css" >
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/login.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </head>
 
- 
+
 <!-- <div class="row"> -->
-	 
+
 <!--  		  <div class="login"> -->
 <!-- 	<h1>Iniciar Sesion</h1> -->
 <!--     <form method="post"> -->
@@ -93,61 +93,61 @@
 <!--         </div> -->
 <!--     </form> -->
 <!-- </div> -->
-	 
- 
-	
+
+
+
 <!-- </div> -->
 
-    <body class="text-center">
-    <form class="form-signin">
-      <img class="mb-4" src="/images/resiliencialogo2.gif" alt="" width="240" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Registrarse para Crear Cuenta</h1>
-	  
-      <label for="inputName" class="sr-only">Name</label>
-      <input type="text" ng-model="name"  id="inputName" class="form-control" placeholder="Captura tu Nombre y Apeido"> 
-	  
-	  <label for="inputEmail" class="sr-only">Correo Electr&oacute;nico</label>
-      <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="Correo Electr&oacute;nico" >
-	  
-            <input type="text" ng-model="pwd"  id="inputName" class="form-control" placeholder="Password" >
-      
-      <input type="number" ng-model="tel"  id="inputName" class="form-control" placeholder="Teléfono" >
-      
-      <label for="inputEmail" class="sr-only">Comment</label>
-      <br/>
-	<textarea class="form-control" ng-model="comment"rows="5"  placeholder="Comentario: Favor de Capturar el Nombre de su Organización" id="comment"></textarea>
- 
-<br/>
+<body class="text-center">
+<form class="form-signin">
+    <img class="mb-4" src="/images/resiliencialogo2.gif" alt="" width="240" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Registrarse para Crear Cuenta</h1>
 
-   <div class="checkbox mb-3">
-   <label> 
-          <input type="checkbox"  class="form-control" value="remember-me"> <p style="margin-top:-40px;">He leído y Acepto <a href="#!convenio" target="_blank">El Convenio de Confidencialidad</a></p>
-       </label>
-	   </div>
+    <label for="inputName" class="sr-only">Name</label>
+    <input type="text" ng-model="name"  id="inputName" class="form-control" placeholder="Captura tu Nombre y Apeido">
 
-      <button class="btn btn-lg btn-primary btn-block"  ng-click="register()" type="submit">Registrarse</button>
-        
-		<div    class="mt-5 mb-3" style="color:white;">
-        	
-        	<p style="margin-top:-40px;">Si ya tienes una cuenta registrada <a href="#!">haz click aqu&iacute;.</a></p>
-        	     	
-        	
-        </div>
+    <label for="inputEmail" class="sr-only">Correo Electr&oacute;nico</label>
+    <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="Correo Electr&oacute;nico" >
 
-        <div    ng-show="notFilledFields" class="mt-5 mb-3 text-muted alert alert-light">
-        	Favor de llenar todos los campos solicitados        </div>
-     <div    ng-show="emailNotValid" class="mt-5 mb-3 text-muted alert alert-light">
-        	Por favor introduce un correo electronico valido        </div>
-        	 <div    ng-show="pwdNotValid" class="mt-5 mb-3 text-muted alert alert-light">
-        	La contrasena debe ser mayor a 8 digitos, letras y numeros son permitidos.       </div>
-        	 
-     </form>
-  </body>
-  
+    <input type="text" ng-model="pwd"  id="inputName" class="form-control" placeholder="Password" >
 
+    <input type="number" ng-model="tel"  id="inputName" class="form-control" placeholder="Teléfono" >
+
+    <label for="inputEmail" class="sr-only">Comment</label>
+    <br/>
+    <textarea class="form-control" ng-model="comment"rows="5"  placeholder="Comentario: Favor de Capturar el Nombre de su Organización" id="comment"></textarea>
+
+    <br/>
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" ng-model="checkterminos" class="form-control" value="remember-me"> <p style="margin-top:-40px;">He leído y Acepto <a href="#!convenio" target="_blank">El Convenio de Confidencialidad</a></p>
+        </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block"  ng-click="register()" type="submit">Registrarse</button>
+
+    <div    class="mt-5 mb-3" style="color:white;">
+
+        <p style="margin-top:-40px;">Si ya tienes una cuenta registrada <a href="#!">haz click aqu&iacute;.</a></p>
+
+
+    </div>
+
+    <div    ng-show="notFilledFields" class="mt-5 mb-3 text-muted alert alert-light">
+        Favor de llenar todos los campos solicitados        </div>
+    <div    ng-show="emailNotValid" class="mt-5 mb-3 text-muted alert alert-light">
+        Por favor introduce un correo electronico valido        </div>
+    <div    ng-show="pwdNotValid" class="mt-5 mb-3 text-muted alert alert-light">
+        La contrasena debe ser mayor a 8 digitos, letras y numeros son permitidos.       </div>
+
+</form>
+</body>
 
 
 
- 
+
+
+
 
 </html>
