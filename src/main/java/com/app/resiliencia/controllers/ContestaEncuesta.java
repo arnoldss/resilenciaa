@@ -130,7 +130,8 @@ public class ContestaEncuesta {
 		 
 		 int usuarioFilter=0;
 		 if(user.getRole()==0){	
-			 usuarioFilter=Integer.parseInt(request.getParameter("idusuario"));			 
+			 //usuarioFilter=Integer.parseInt(request.getParameter("idusuario"));
+			 usuarioFilter= user.getId();
 		 }else{	
 			 usuarioFilter= user.getId(); 
 		 }
@@ -242,11 +243,11 @@ public class ContestaEncuesta {
 		
 		
 
-		 if(promedio>1 || promedio <1.99){
+		 if(promedio>=0 && promedio <=1.99){
 			 areas.setImg("roja.png");
 		 }
 		 
-	     if(promedio>2 || promedio <2.99){
+	     if(promedio>=2 && promedio <=2.99){
 	    	 areas.setImg("amarilla.png");								 
 		}
 	     if(promedio ==3 ){

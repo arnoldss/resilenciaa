@@ -1,16 +1,16 @@
- <!-- Content Header (Page header) -->
- 
-    <section class="content-header">
-      <h1>
-              <div id="titulo">RESULTADO DE EVALUACI&Oacute;N</div>
-      </h1>
-     
-      <ol class="breadcrumb">
+<!-- Content Header (Page header) -->
+
+<section class="content-header">
+    <h1>
+        <div id="titulo">RESULTADO DE EVALUACI&Oacute;N</div>
+    </h1>
+
+    <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">RESULTADO DE EVALUACI&Oacute;N</li>
-      </ol>
-  </section>
-    <!-- /.content -->
+    </ol>
+</section>
+<!-- /.content -->
 <br/>
 <br/>
 
@@ -21,164 +21,181 @@ text-align: left;
 margin: auto;}
 
 #lateral{
-width: 180px;  /*Este será el ancho que tendrá tu columna*/
-background-color: #CCCCCC;  /*Aquí pon el color del fondo que quieras para este lateral*/
+width: 180px;  /*Este serï¿½ el ancho que tendrï¿½ tu columna*/
+background-color: #CCCCCC;  /*Aquï¿½ pon el color del fondo que quieras para este lateral*/
 float:right; /*Aqui determinas de lado quieres quede esta "columna" */
 top: 100px;
 right: 0;
 }
 
 #principal{
-margin-left:190px; /*Este margen hace que no se encime el contenido en tu menúlateral, es     importante que pongas un pocos pixeles más que el ancho  de tu columna lateral*/
+margin-left:190px; /*Este margen hace que no se encime el contenido en tu menï¿½lateral, es     importante que pongas un pocos pixeles mï¿½s que el ancho  de tu columna lateral*/
 background-color: #FFFFFF;
 border:#000000 1px solid; /*ponemos un dorde para que se vea bonito*/
 position: absolute;
 
 }
+
 </style>
 
 <div id="titulo">
-Gracias por haber contestado la Evaluaci&oacute;n Institucional.
-Los resultados de tu instituci&oacute;n podr&aacute;n mostrarse en tres niveles:
-<ul>
-		<li>1. En Proceso</li>
-		<li>2. En Desarrollo</li>
-		<li>3. Nivel &Oacute;ptimo</li>
-</ul>
+    Gracias por haber contestado la Evaluaci&oacute;n Institucional.
+    Los resultados de tu instituci&oacute;n podr&aacute;n mostrarse en tres niveles:
+    <ul>
+        <li>1. En Proceso</li>
+        <li>2. En Desarrollo</li>
+        <li>3. Nivel &Oacute;ptimo</li>
+    </ul>
 
 
-A continuaci&oacute;n mostramos los resultados que tu instituci&oacute;n obtuvo por &aacute;rea, as&iacute; como de manera global.
-De esta manera se cuenta ya con  una radiograf&oacute;ia de d&oacute;nde se ubica tu instituci&oacute;n en cuanto a nivel de profesionalizaci&oacute;n y en en qu&eacute; aspectos se requiere acciones de mejora.
+    A continuaci&oacute;n mostramos los resultados que tu instituci&oacute;n obtuvo por &aacute;rea, as&iacute; como de
+    manera global.
+    De esta manera se cuenta ya con una radiograf&iacute;a de d&oacute;nde se ubica tu instituci&oacute;n en cuanto a
+    nivel de profesionalizaci&oacute;n y en en qu&eacute; aspectos se requiere acciones de mejora.
 </div>
- <h5>
-              <div id="titulo">
-              
-              
-              </div>
- </h5>
-<div  class="row" style="background-color:#DCE6F1;">
- 
-<div class="col-md-8">
-					 <div class="col-md-12" style="background-color: #16365C">
-										         <font size="5" color="#FFFFFF">DIAGNOSTICO INSTITUCIONAL</font>
-													  
-					  </div>
-					 <!--div class="col-md-12" style="background-color: #C5D9F1">
-					          
-					                                   <div class="col-xs-6 col-md-8"><p style="padding-left:200px;font-size:25px;"><p style="padding-left:30px;font-size:25px;color:#000000;">SUB-ÁREA</p></div>
-													 
-													  <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:25px;"><p style="padding-left:30px;font-size:25px;color:#000000;">ÁREA</p></div>
-													  
-					 </div-->
-
-					<div "margin-left:10px;" ng-repeat="area in encuesta.area "class="row">
-						<div class="col-md-12">
-							<h4 style="background-color:#1f1f2e;" class="header">
-							      
-							 
-								
-								
-								<div class="row">
-								  <div class="col-xs-6 col-md-8"><p style="padding-left:200px;font-size:25px;color:#2b2929cc;"><p style="padding-left:30px;font-size:25px;color:#ffffff;">{{area.name}} </p></div>
-								  <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:25px;color:#2b2929cc;"><p style="padding-left:30px;font-size:25px;color:#ffffff;">{{area.promedio | number : 2}}</p></div>
-								  <div class="col-xs-6 col-md-2"><img src="/images/{{area.img}}" height="42" width="42">	</div>
-								</div>
-								
-							 
-							</h4>
-							<div style="margin-top:-20px;" ng-repeat="subarea in area.subarea "class="row">
-								<div class="col-md-12">
-								<h5 class="header">							    
-							    </h5>
-							   <h5>
-							    
-							     <div class="row">
-								  <div class="col-md-8"><p style="padding-left:50px;font-size:20px;color:#2b2929cc;">{{subarea.name}}</p></div>
-								  <div class="col-md-4" ng-if="encuesta.rol == 0"><p style="padding-left:50px;font-size:20px;color:#2b2929cc;">{{subarea.promedio | number : 2}}</p></div>
-								</div>
-							
-							
-							 </h5>
-							 
-					
-							</h5>
-									  
-									<div style="margin-left:10px;" ng-repeat="pregunta in subarea.pregunta "class="row">
-										
-									</div>
-									
-									
-									
-								</div>
-							</div>
-						</div>
-					</div>
-
-</div>
+<h5>
+    <div id="titulo">
 
 
+    </div>
+</h5>
+<div class="row" style="background-color:#DCE6F1;">
+
+    <div class="col-md-8">
+        <div class="col-md-12" style="background-color: #16365C">
+            <font size="5" color="#FFFFFF">DIAGNOSTICO INSTITUCIONAL</font>
+
+        </div>
+        <!--div class="col-md-12" style="background-color: #C5D9F1">
+
+                                          <div class="col-xs-6 col-md-8"><p style="padding-left:200px;font-size:25px;"><p style="padding-left:30px;font-size:25px;color:#000000;">SUB-ï¿½REA</p></div>
+
+                                         <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:25px;"><p style="padding-left:30px;font-size:25px;color:#000000;">ï¿½REA</p></div>
+
+        </div-->
+
+        <div
+        "margin-left:10px;" ng-repeat="area in encuesta.area "class="row">
+        <div class="col-md-12">
+            <h4 style="background-color:#1f1f2e;" class="header">
 
 
+                <div class="row">
+                    <div class="col-xs-6 col-md-8"><p style="padding-left:200px;font-size:25px;color:#2b2929cc;">
+                        <p style="padding-left:30px;font-size:25px;color:#ffffff;">{{area.name}} </p></div>
+                    <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-2"><p
+                            style="padding-left:200px;font-size:25px;color:#2b2929cc;">
+                        <p style="padding-left:30px;font-size:25px;color:#ffffff;">{{area.promedio | number : 2}}</p>
+                    </div>
+                    <div class="col-xs-6 col-md-2"><img src="/images/{{area.img}}" height="42" width="42"></div>
+                </div>
 
 
+            </h4>
+            <div style="margin-top:-20px;" ng-repeat="subarea in area.subarea " class="row">
+                <div class="col-md-12">
+                    <h5 class="header">
+                    </h5>
+                    <h5>
+
+                        <div class="row">
+                            <div class="col-md-8"><p style="padding-left:50px;font-size:20px;color:#2b2929cc;">
+                                {{subarea.name}}</p></div>
+
+                            <!-- ng if aqui abajop ng-if="encuesta.rol == 0" -->
+                            <div  ng-if="encuesta.rol == 0" class="col-md-4"><p
+                                    style="padding-left:50px;font-size:20px;color:#2b2929cc;">{{subarea.promedio |
+                                number : 2}}</p></div>
+                        </div>
 
 
-          <div class="col-md-4" style="background-color: #16365C">
-					         <font size="2" color="#FFFFFF">NIVEL DE FORTALECIMIENTO DE LA INSTITUCION</font>
-								  
-		   </div>
+                    </h5>
 
 
-           <div class="col-md-4" style="background-color: #C5D9F1">
-          
-                                   <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-8"><p style="padding-left:200px;font-size:25px;"><p style="padding-left:30px;font-size:25px;color:#000000;">
-                                    
-                                    {{encuesta.promedio | number : 2}}                                  
-                                     {{encuesta.rol}}  
-                                   
-                                   </p></div>
-								 
-								  <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:25px;"><p style="padding-left:30px;font-size:25px;color:#000000;"><img src="/images/{{encuesta.img}}" height="42" width="42"></p></div>
-								  
-		   </div>
-		 <div class="col-md-4">
-		      <div  class="col-xs-6 col-md-4">&nbsp;</div>
-		      <div  class="col-xs-6 col-md-4">&nbsp;</div>
-		      <div  class="col-xs-6 col-md-4">&nbsp;</div>
-		 </div>
-		 <div class="col-md-4">
-		      <div  class="col-xs-6 col-md-4">&nbsp;</div>
-		      <div  class="col-xs-6 col-md-4">&nbsp;</div>
-		      <div  class="col-xs-6 col-md-4">&nbsp;</div>
-		 </div>
-		   <div class="col-md-4">
-								  <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;"><p style="padding-left:30px;font-size:15px;color:#000000;"> 1 - 1.99 </p></div>
-								  <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;"><p style="padding-left:30px;font-size:15px;color:#000000;"><img src="/images/roja.png" height="42" width="42"></p></div>
-								  <div class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;"><p style="padding-left:30px;font-size:15px;color:#000000;">En proceso de fortalecimiento</p></div>
-		   </div>
-		   <div class="col-md-4">
-								  <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;"><p style="padding-left:30px;font-size:15px;color:#000000;"> 2-2.99 </p></div>
-								  <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;"><p style="padding-left:30px;font-size:15px;color:#000000;"><img src="/images/amarilla.png" height="42" width="42"></p></div>
-								  <div class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;"><p style="padding-left:30px;font-size:15px;color:#000000;">En Desarrollo</p></div>
-		   </div>
-		   <div class="col-md-4">
-								  <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;"><p style="padding-left:30px;font-size:15px;color:#000000;"> 3 </p></div>
-								  <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;"><p style="padding-left:30px;font-size:15px;color:#000000;"><img src="/images/verde.png" height="42" width="42"></p></div>
-								  <div class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;"><p style="padding-left:30px;font-size:15px;color:#000000;">Optimo</p></div>
-		   </div>
-								
+                    </h5>
+
+                    <div style="margin-left:10px;" ng-repeat="pregunta in subarea.pregunta " class="row">
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
+<div class="col-md-4" style="background-color: #16365C">
+    <font size="2" color="#FFFFFF">NIVEL DE FORTALECIMIENTO DE LA INSTITUCIÃ“N</font>
+
+</div>
 
 
+<div class="col-md-4" style="background-color: #C5D9F1">
 
+    <div class="col-xs-6 col-md-8"><p style="padding-left:200px;font-size:25px;">
+        <p style="padding-left:30px;font-size:25px;color:#000000;">
+
+            {{encuesta.promedio | number : 2}}
+            {{encuesta.rol}}
+
+        </p></div>
+
+    <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:25px;">
+        <p style="padding-left:30px;font-size:25px;color:#000000;"><img src="/images/{{encuesta.img}}" height="42"
+                                                                        width="42"></p></div>
+
+</div>
+<div class="col-md-4">
+    <div class="col-xs-6 col-md-4">&nbsp;</div>
+    <div class="col-xs-6 col-md-4">&nbsp;</div>
+    <div class="col-xs-6 col-md-4">&nbsp;</div>
+</div>
+<div class="col-md-4">
+    <div class="col-xs-6 col-md-4">&nbsp;</div>
+    <div class="col-xs-6 col-md-4">&nbsp;</div>
+    <div class="col-xs-6 col-md-4">&nbsp;</div>
+</div>
+<div class="col-md-4">
+    <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-4"><p
+            style="padding-left:200px;font-size:15px;color:#2b2929cc;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;"> 1 - 1.99 </p></div>
+    <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;"><img src="/images/roja.png" height="42" width="42">
+        </p></div>
+    <div class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;">En Proceso de Fortalecimiento</p></div>
+</div>
+<div class="col-md-4">
+    <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-4"><p
+            style="padding-left:200px;font-size:15px;color:#2b2929cc;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;"> 2-2.99 </p></div>
+    <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;"><img src="/images/amarilla.png" height="42"
+                                                                        width="42"></p></div>
+    <div class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;">En Desarrollo</p></div>
+</div>
+<div class="col-md-4">
+    <div ng-if="encuesta.rol == 0" class="col-xs-6 col-md-4"><p
+            style="padding-left:200px;font-size:15px;color:#2b2929cc;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;"> 3 </p></div>
+    <div class="col-xs-6 col-md-2"><p style="padding-left:200px;font-size:15px;color:#2b2929cc;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;"><img src="/images/verde.png" height="42" width="42">
+        </p></div>
+    <div class="col-xs-6 col-md-4"><p style="padding-left:200px;font-size:15px;">
+        <p style="padding-left:30px;font-size:15px;color:#000000;">&Oacute;ptimo</p></div>
+</div>
+
+</div>
 
 
 <div class="row">
-	<div class="col-md-12">
-		 
-	</div>
+    <div class="col-md-12">
+
+    </div>
 </div>
 
 

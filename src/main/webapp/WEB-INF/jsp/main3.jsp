@@ -250,7 +250,9 @@
 			      %>
 			            
 			                              <li  class="active"><a href="#!encuestaAdmin" ><i></i>Evaluaci&oacute;n</a></li> 
-			                              <li  class="active"><a href="#!resultadoEncuesta" ><i></i>Resultado de Evaluaci&oacute;n</a></li>  
+			                            <!--  <li  class="active"><a href="#!resultadoEncuesta" ><i></i>Resultado de Evaluaci&oacute;n</a></li>   -->
+			                          <li  class="active"><a href="#!resultadoEncuestaUser/<%=user.getId() %>" ><i></i>Resultado de Evaluaci&oacute;n</a></li>
+<li> wey </li>
 			           
 			      <% }
 			    
