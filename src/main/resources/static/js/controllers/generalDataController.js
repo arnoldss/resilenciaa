@@ -67,7 +67,7 @@ app.controller('generalDataController' ,function($scope,ngTableParams,$filter,$w
 					$mdDialog.alert()
 					.parent(angular.element(document.querySelector('#popupContainer')))
 					.clickOutsideToClose(true)
-					.title('Informacion')
+					.title('Información')
 					.textContent('Por favor llenar todos los campos, Gracias.')
 					.ariaLabel('Alert Dialog Demo')
 					.ok('Salir')
@@ -93,19 +93,19 @@ app.controller('generalDataController' ,function($scope,ngTableParams,$filter,$w
 					        .parent(angular.element(document.querySelector('#popupContainer')))
 					        .clickOutsideToClose(true)
 					        .title('Informacion')
-					        .textContent('Tu registro se ha realizado de forma satisfactoria.')
+					        .textContent('Tu registro se ha realizado de forma satisfactoria, procede al llenado de "Quienes Somos"')
 					        .ariaLabel('Alert Dialog Demo')
 					        .ok('Salir')
 					        
 					    ).then(function(i){
-			    			//$window.location.href = '/';
+			    			$window.location.href = '/main3#!/whoarewe';
 					      });
 			
 	    }, function(response) {
 	        //Second function handles error
 	        $scope.content = "Something went wrong";
 	        console.log("Somenthing went wrong")
-		});  
+		});
  		/* $http.get("/user/activateUser?id="+id)
 	    .then(function(response) {
 	    	console.log(response.data)

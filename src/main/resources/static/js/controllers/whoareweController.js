@@ -16,7 +16,7 @@ app.controller('whoareweController' ,function($scope,ngTableParams,$filter,$wind
 	$( "#resimg" ).hide();
 		 	 $scope.save =	function(id){
 		console.log("  save ");
-		if(!validateObject()){
+		if(!validateObject()) {
 			console.log("Ingresar data faltante")
 			  $mdDialog.show(
 					$mdDialog.alert()
@@ -41,13 +41,26 @@ app.controller('whoareweController' ,function($scope,ngTableParams,$filter,$wind
 		var parameter = JSON.stringify($scope.whoarewe);
 		$http.post("/catalogs/addWhoAreWe", parameter) .then(function(response) {
 	    	console.log(response.data)
+
+	    		    	   $mdDialog.show(
+            					      $mdDialog.alert()
+            					        .parent(angular.element(document.querySelector('#popupContainer')))
+            					        .clickOutsideToClose(true)
+            					        .title('Informacion')
+            					        .textContent('Tu registro se ha realizado de forma satisfactoria, procede al llenado de "Evaluacion"')
+            					        .ariaLabel('Alert Dialog Demo')
+            					        .ok('Salir')
+
+            					    ).then(function(i){
+            			    			$window.location.href = '/main3#!/encuestaAdmin';
+            					      });
 			
 			
 	    }, function(response) {
 	        //Second function handles error
 	        $scope.content = "Something went wrong";
 	        console.log("Somenthing went wrong")
-		});  
+		});
  	 
 	} 
 

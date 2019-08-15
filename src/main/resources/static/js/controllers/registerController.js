@@ -32,7 +32,7 @@ app.controller('registerController', function($scope,$window,$http,$rootScope,$m
 			$scope.notFilledFields	=	true;
 				return;
 		}
-			return;
+			//for tests return;
 		$scope.notFilledFields	=	false;
 
 		if(!validateEmail($scope.email)){

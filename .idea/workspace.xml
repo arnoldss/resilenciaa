@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="unnamed" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed4d32f-4feb-4700-899e-d3135fe37b2e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/resiliencia/controllers/ContestaEncuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/resiliencia/controllers/ContestaEncuesta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/login.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/login.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/register.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/register.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/generalDataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/generalDataController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/registerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/whoareweController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/whoareweController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,9 +35,9 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunDashboard">
@@ -46,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Maven.resilicencia [clean,install]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -92,6 +98,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="C:/apache-maven-3.6.1-bin/apache-maven-3.6.1/bin" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="resilicencia [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -110,6 +168,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ApplicationBootResiliencia" />
+      <item itemvalue="Maven.resilicencia [clean,install]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApplicationBootResiliencia" />
