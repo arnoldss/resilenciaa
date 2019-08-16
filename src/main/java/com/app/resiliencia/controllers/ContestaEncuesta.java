@@ -130,8 +130,8 @@ public class ContestaEncuesta {
 		 
 		 int usuarioFilter=0;
 		 if(user.getRole()==0){	
-			 //usuarioFilter=Integer.parseInt(request.getParameter("idusuario"));
-			 usuarioFilter= user.getId();
+			 usuarioFilter=Integer.parseInt(request.getParameter("idusuario"));
+			 //usuarioFilter= user.getId();
 		 }else{	
 			 usuarioFilter= user.getId(); 
 		 }

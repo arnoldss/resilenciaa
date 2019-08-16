@@ -40,7 +40,7 @@ app.controller('registerController', function($scope,$window,$http,$rootScope,$m
 			return;
 		}
 		$scope.emailNotValid	=	false;
-		$http.get("/user/register?username="+$scope.name+"&mail="+$scope.email+"&tel="+$scope.tel+"&pwd="+$scope.pwd+"&comment="+$scope.comment)
+		$http.get("/user/register?username="+$scope.name+"&comment="+$scope.comment+"&mail="+$scope.email+"&tel="+$scope.tel+"&pwd="+$scope.pwd+"")
 	    .then(function(response) {
 	    	console.log(response.data)
 	    	   $mdDialog.show(

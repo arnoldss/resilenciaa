@@ -105,7 +105,7 @@
     <h1 class="h3 mb-3 font-weight-normal">Registrarse para Crear Cuenta</h1>
 
     <label for="inputName" class="sr-only">Name</label>
-    <input type="text" ng-model="name"  id="inputName" class="form-control" placeholder="Captura tu Nombre y Apeido">
+    <input type="text" ng-model="name"  id="inputName" class="form-control" placeholder="Captura tu Nombre y Apellido">
 
     <label for="inputEmail" class="sr-only">Correo Electr&oacute;nico</label>
     <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="Correo Electr&oacute;nico" >
@@ -116,7 +116,7 @@
 
     <label for="inputEmail" class="sr-only">Comment</label>
     <br/>
-    <textarea class="form-control" ng-model="comment"rows="5"  placeholder="Comentario: Favor de Capturar el Nombre de su Organización" id="comment"></textarea>
+    <textarea class="form-control" ng-model="comment" rows="5"  placeholder="Comentario: Favor de Capturar el Nombre de su Organización" id="comment"></textarea>
 
     <br/>
 
@@ -139,9 +139,9 @@
     <div    ng-show="notFilledFields" class="mt-5 mb-3 text-muted alert alert-light">
         Favor de llenar todos los campos solicitados        </div>
     <div    ng-show="emailNotValid" class="mt-5 mb-3 text-muted alert alert-light">
-        Por favor introduce un correo electronico valido        </div>
+        Por favor introduce un correo electrónico válido       </div>
     <div    ng-show="pwdNotValid" class="mt-5 mb-3 text-muted alert alert-light">
-        La contrasena debe ser mayor a 8 digitos, letras y numeros son permitidos.       </div>
+        La contraseña debe ser mayor a 8 dígitos, letras y números son permitidos.      </div>
 
 </form>
 </body>

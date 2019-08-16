@@ -8,6 +8,7 @@ app.controller('loginController', function($scope,$window,$http,$rootScope,$base
 	}
 	$rootScope.idUser	=	"";
 	$scope.loginError	=	false;
+	$rootScope.showResult	=	false;
 	$scope.login =	function(){
 		//$window.location.href = '#!register';
 

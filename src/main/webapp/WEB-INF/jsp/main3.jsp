@@ -221,7 +221,8 @@
                    <li class="active"><a href="#!generalData" ><i></i>Datos Generales</a></li>
                    <li class="active"><a href="#!whoarewe" ><i></i>Qui&eacute;nes Somos</a></li>
                    
-                   
+                   <li ng-if="showResult" class="active"><a href="#!resultadoEncuestaUser/{{idUser}}" ><i></i>Resultado de Evaluaci&oacute;n</a></li>
+
                    <% 
 			          if(rol==1){
 			            if(user.getEncuesta()==true){
@@ -231,28 +232,31 @@
 						                      
 						      <%
 			          }
+
+
+
+
+
 			          if(user.getEncuesta()==false){
 			                  %>
 						             <li  class="active"><a href="#!encuesta" ><i></i>Evaluaci&oacute;n</a></li>              
 						                      
 						      <%
-			          } 
-			          
+			          }
+
 			       }
-			    
+
 			      %>
-			      
-			            
-			      <% 
+
+
+			      <%
 			          if(rol==0){
-			           
-			    
+
+
 			      %>
-			            
-			                              <li  class="active"><a href="#!encuestaAdmin" ><i></i>Evaluaci&oacute;n</a></li> 
-			                            <!--  <li  class="active"><a href="#!resultadoEncuesta" ><i></i>Resultado de Evaluaci&oacute;n</a></li>   -->
-			                          <li  class="active"><a href="#!resultadoEncuestaUser/<%=user.getId() %>" ><i></i>Resultado de Evaluaci&oacute;n</a></li>
-<li> wey </li>
+
+			                              <li  class="active"><a href="#!encuestaAdmin" ><i></i>Evaluaci&oacute;n</a></li>
+			                              <li  class="active"><a href="#!resultadoEncuesta" ><i></i>Resultado de Evaluaci&oacute;n</a></li>
 			           
 			      <% }
 			    

@@ -136,10 +136,9 @@ position: absolute;
 <div class="col-md-4" style="background-color: #C5D9F1">
 
     <div class="col-xs-6 col-md-8"><p style="padding-left:200px;font-size:25px;">
-        <p style="padding-left:30px;font-size:25px;color:#000000;">
+        <p ng-if="encuesta.rol == 0" style="padding-left:30px;font-size:25px;color:#000000;">
 
             {{encuesta.promedio | number : 2}}
-            {{encuesta.rol}}
 
         </p></div>
 

@@ -25,7 +25,8 @@ app.controller('encuestaController' ,function($scope,ngTableParams,$filter,$wind
   
 
   $( "#resimg" ).remove();
-  
+
+
   $http.get("/contestaEncuesta/getValidaIsEncuesta")
   .then(function(response) {
 	var  isResponseEncuesta=response.data;
@@ -167,11 +168,17 @@ app.controller('encuestaController' ,function($scope,ngTableParams,$filter,$wind
 				    })
 				    .one('click', '#closeModalEncuestaOk', function(e) {				    			    	 
 				    	 $( "div" ).removeClass( "modal-backdrop" )
-				    	 window.location.href = "#";
+				    	 $rootScope.showResult	=	true;
+				    	 window.location.href = "#!resultadoEncuestaUser/" + $rootScope.idUser;
+
+				    	// window.location.href = "#";
 				    	  
 				    }).one('click', '#xcloseModalEncuestaOk', function(e) {				    			    	 
 				    	 $( "div" ).removeClass( "modal-backdrop" )
-				    	 window.location.href = "#";
+				    	/// window.location.href = "#";
+				    	$rootScope.showResult	=	true;
+
+				    	window.location.href = "#!resultadoEncuestaUser/" + $rootScope.idUser;
 				    })
 			   
 				    $('body').removeClass("modal-open")
@@ -270,7 +277,8 @@ app.controller('encuestaController' ,function($scope,ngTableParams,$filter,$wind
 		 
 	 }
 	
-	
-	
+	  console.log($scope);
+
+	 console.log($rootScope);
  
 });
