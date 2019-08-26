@@ -27,7 +27,7 @@ app.controller('registerController', function($scope,$window,$http,$rootScope,$m
 			avoidDouble=true;
 			console.log("email value: "+$scope.email)
 			console.log("name value: "+$scope.name)
-		if($scope.email == "" || $scope.name == ""|| $scope.tel == ""|| $scope.pwd == ""|| $scope.comment == "" || $scope.checkterminos === false){
+		if($scope.email == "" || $scope.name == ""|| $scope.tel == ""|| $scope.pwd == ""|| $scope.comment == "" || $scope.checkterminos === ""){
 			console.log("Inside email vacio")
 			$scope.notFilledFields	=	true;
 				return;
@@ -47,7 +47,7 @@ app.controller('registerController', function($scope,$window,$http,$rootScope,$m
 					      $mdDialog.alert()
 					        .parent(angular.element(document.querySelector('#popupContainer')))
 					        .clickOutsideToClose(true)
-					        .title('Informacion')
+					        .title('Informativo')
 					        .textContent('Tu registro se ha realizado de forma satisfactoria, en breve recibiras un correo con contrasena para poder ingresar al sistema, Gracias.')
 					        .ariaLabel('Alert Dialog Demo')
 					        .ok('Salir')
@@ -62,7 +62,7 @@ app.controller('registerController', function($scope,$window,$http,$rootScope,$m
 				      $mdDialog.alert()
 				        .parent(angular.element(document.querySelector('#popupContainer')))
 				        .clickOutsideToClose(true)
-				        .title('Informacion')
+				        .title('Informativo')
 				        .textContent('Por el momento el servicio de registro de cuentas no esta disponible, por favor intenta mas tarde. Gracias.')
 				        .ariaLabel('Alert Dialog Demo')
 				        .ok('Salir')

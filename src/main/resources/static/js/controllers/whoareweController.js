@@ -22,7 +22,7 @@ app.controller('whoareweController' ,function($scope,ngTableParams,$filter,$wind
 					$mdDialog.alert()
 					.parent(angular.element(document.querySelector('#popupContainer')))
 					.clickOutsideToClose(true)
-					.title('Informacion')
+					.title('Informativo')
 					.textContent('Por favor llenar todos los campos, Gracias.')
 					.ariaLabel('Alert Dialog Demo')
 					.ok('Salir')
@@ -46,13 +46,13 @@ app.controller('whoareweController' ,function($scope,ngTableParams,$filter,$wind
             					      $mdDialog.alert()
             					        .parent(angular.element(document.querySelector('#popupContainer')))
             					        .clickOutsideToClose(true)
-            					        .title('Informacion')
+            					        .title('Informativo')
             					        .textContent('Tu registro se ha realizado de forma satisfactoria, procede al llenado de "Evaluacion"')
             					        .ariaLabel('Alert Dialog Demo')
             					        .ok('Salir')
 
             					    ).then(function(i){
-            			    			$window.location.href = '/main3#!/encuestaAdmin';
+            			    			$window.location.href = '/main3#!/encuesta';
             					      });
 			
 			

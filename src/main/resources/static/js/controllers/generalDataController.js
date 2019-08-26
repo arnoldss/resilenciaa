@@ -92,7 +92,7 @@ app.controller('generalDataController' ,function($scope,ngTableParams,$filter,$w
 					      $mdDialog.alert()
 					        .parent(angular.element(document.querySelector('#popupContainer')))
 					        .clickOutsideToClose(true)
-					        .title('Informacion')
+					        .title('Informativo')
 					        .textContent('Tu registro se ha realizado de forma satisfactoria, procede al llenado de "Quienes Somos"')
 					        .ariaLabel('Alert Dialog Demo')
 					        .ok('Salir')

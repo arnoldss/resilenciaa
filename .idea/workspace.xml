@@ -8,14 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6ed4d32f-4feb-4700-899e-d3135fe37b2e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/resiliencia/controllers/ContestaEncuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/resiliencia/controllers/ContestaEncuesta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/encuesta.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/encuesta.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/resiliencia/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/resiliencia/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/register.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/register.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/resultadoEncuestaUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/resultadoEncuestaUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/encuestaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/encuestaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/loginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/loginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/generalDataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/generalDataController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/registerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main3.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main3.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/controllers/whoareweController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/controllers/whoareweController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

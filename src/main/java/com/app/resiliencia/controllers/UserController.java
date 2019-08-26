@@ -119,8 +119,8 @@ public class UserController{
 		if(user.getStatus().equals(1)) {
 			user.setStatus(0);
 		}else {
-			logger.info("Mail to: "+user.getEmail());
-			mail.sendMail("resilienciaapp@gmail.com", user.getEmail(), "Activacion de cuenta", "Tu usuario es: "+user.getEmail()+" y tu contrasena es: "+user.getPassword());
+		//	logger.info("Mail to: "+user.getEmail());
+		//	mail.sendMail("resilienciaapp@gmail.com", user.getEmail(), "Activacion de cuenta", "Tu usuario es: "+user.getEmail()+" y tu contrasena es: "+user.getPassword());
 			user.setStatus(1);
 		}
 		userDao.updateUser(user);
